@@ -15,8 +15,8 @@ export default class NumberBoard extends Component {
     render() {
         const rows = [];
         for(let i = 4; i <= numberKeys.length; i += 4){
-            let row = numberKeys.slice(i-4, i).map((element) => <Button handleClick={this.inputField}>{element}</Button>);
-            rows.push(<div className='row'>{row}</div>);
+            let row = numberKeys.slice(i-4, i).map((element, index) => <Button onClick={console.log('hellooooo')} key={index}>{element}</Button>);
+            rows.push(<div className='row' key={i}>{row}</div>);
         }
 
         return(
